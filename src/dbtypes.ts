@@ -1,33 +1,14 @@
-/**
- * DBCategory represents how the database stores a Category
- * @type DBCategory
- * @property {string} channel_id
- * @property {string} emote
- * @property {string} guild_id
- * @property {string} id
- * @property {string} name
- */
 export type DBCategory = {
-    channel_id: string,
+    channel_id: number,
     emote: string,
-    guild_id: string,
-    id: string,
+    guild_id: number,
+    id: number,
     name: string,
 }
 
-/**
- * DBMessage is how the database stores a Message
- * @type DBMessage
- * @property {string} content
- * @property {string} client_id
- * @property {string} is_deleted
- * @property {string} modmail_id
- * @property {string} sender
- * @property {string} thread_id
- */
 export type DBMessage = {
     content: string,
-    client_id:string,
+    client_id: number | null,
     is_deleted: boolean,
     modmail_id: number,
     sender: number,
@@ -35,25 +16,14 @@ export type DBMessage = {
     internal: boolean
 }
 
-/**
- * DBThread represents how the database stores a Thread
- * @type DBThread
- */
 export type DBThread = {
     author: string,
-    channel: string,
-    id: string,
+    channel: number,
+    id: number,
     is_active: boolean,
-    category: string,
+    category: number,
 }
 
-/**
- * @type DBMuteStatus
- * @property {number} user_id
- * @property {number} till Unix Epoch in seconds
- * @property {number} category_id
- * @property {string} reason
- */
 export type DBMuteStatus = {
     user_id: number,
     till: number,
