@@ -40,7 +40,7 @@ export type DBMessage = {
  * @type DBThread
  */
 export type DBThread = {
-    author: string,
+    author: number,
     channel: string,
     id: number,
     is_active: boolean,
