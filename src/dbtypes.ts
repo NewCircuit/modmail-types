@@ -19,15 +19,15 @@ export type DBCategory = {
  * DBMessage is how the database stores a Message
  * @type DBMessage
  * @property {string} content
- * @property {string} client_id
+ * @property {number} client_id
  * @property {string} is_deleted
- * @property {string} modmail_id
+ * @property {number} modmail_id
  * @property {string} sender
- * @property {string} thread_id
+ * @property {number} thread_id
  */
 export type DBMessage = {
     content: string,
-    client_id:string,
+    client_id: number,
     is_deleted: boolean,
     modmail_id: number,
     sender: number,
