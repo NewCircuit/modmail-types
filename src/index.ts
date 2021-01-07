@@ -57,7 +57,7 @@ export type Thread = {
 }
 
 export type MuteStatus = {
-    user: number,
+    user: string,
     till: number,
     category: string,
     reason: string,
