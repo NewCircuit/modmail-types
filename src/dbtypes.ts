@@ -4,7 +4,7 @@
  * @property {number} channel_id
  * @property {string} emote
  * @property {number} guild_id
- * @property {string} id
+ * @property {number} id
  * @property {string} name
  */
 export type DBCategory = {
@@ -22,7 +22,7 @@ export type DBCategory = {
  * @property {number} client_id
  * @property {string} is_deleted
  * @property {number} modmail_id
- * @property {string} sender
+ * @property {number} sender
  * @property {number} thread_id
  */
 export type DBMessage = {
@@ -41,10 +41,10 @@ export type DBMessage = {
  */
 export type DBThread = {
     author: number,
-    channel: string,
+    channel: number,
     id: number,
     is_active: boolean,
-    category: string,
+    category: number,
 }
 
 /**
