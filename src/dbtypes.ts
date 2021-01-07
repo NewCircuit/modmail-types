@@ -1,17 +1,17 @@
 /**
  * DBCategory represents how the database stores a Category
  * @type DBCategory
- * @property {number} channel_id
+ * @property {string} channel_id
  * @property {string} emote
- * @property {number} guild_id
+ * @property {string} guild_id
  * @property {string} id
  * @property {string} name
  */
 export type DBCategory = {
-    channel_id: number,
+    channel_id: string,
     emote: string,
-    guild_id: number,
-    id: number,
+    guild_id: string,
+    id: string,
     name: string,
 }
 
@@ -42,7 +42,7 @@ export type DBMessage = {
 export type DBThread = {
     author: string,
     channel: string,
-    id: number,
+    id: string,
     is_active: boolean,
     category: string,
 }
@@ -64,7 +64,7 @@ export type DBMuteStatus = {
 export type DBStandardReply = {
     reply: string,
     name: string,
-    id: number,
+    id: bigint,
 }
 
 export type DBRole = {
