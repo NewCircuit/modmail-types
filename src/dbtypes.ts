@@ -38,7 +38,7 @@ export type DBStandardReply = {
 }
 
 export type DBRole = {
-    category: number,
+    category_id: number,
     role_id: number,
     level: string,
 }
