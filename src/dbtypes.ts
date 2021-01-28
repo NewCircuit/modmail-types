@@ -1,4 +1,5 @@
 export type DBCategory = {
+    is_active: boolean,
     channel_id: number,
     emote: string,
     guild_id: number,
