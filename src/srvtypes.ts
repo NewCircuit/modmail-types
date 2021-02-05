@@ -34,7 +34,7 @@ export interface GetMemberStateRes extends ServerResponse {
 }
 
 export interface GetAllMemberStatesReq extends ServerMessage {
-  args: [string];
+  args: [string, number?, number?];
 }
 
 export interface GetAllMemberStatesRes extends ServerResponse {
