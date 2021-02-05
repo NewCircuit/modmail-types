@@ -1,5 +1,8 @@
+import { MemberState } from '.';
+
 export const WORKER_CALLS = {
   getRoles: 'get_member_roles',
+  getMember: 'get_member_state',
 }
 
 export interface ServerMessage {
@@ -19,4 +22,12 @@ export interface GetRolesReq extends ServerMessage {
 
 export interface GetRolesRes extends ServerResponse {
   data: string[];
+}
+
+export interface GetMemberStateReq extends ServerMessage {
+  args: [string, string];
+}
+
+export interface GetMemberStateRes extends ServerResponse {
+  data: MemberState;
 }
