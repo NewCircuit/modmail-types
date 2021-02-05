@@ -1,4 +1,4 @@
-import { MemberState } from '.';
+import { MemberState, UserState } from '.';
 
 export const WORKER_CALLS = {
   getRoles: 'get_member_roles',
@@ -47,11 +47,5 @@ export interface GetUserStateReq extends ServerMessage {
 }
 
 export interface GetUserStateRes extends ServerResponse {
-  data: {
-    avatarURL: string,
-    discriminator: string,
-    id: string,
-    nickname: string,
-    username: string,
-  }
+  data: UserState;
 }

@@ -48,12 +48,17 @@ export type ModmailUser = {
   id: string,
 }
 
-export interface MemberState extends ModmailUser {
-  username: string,
+export interface UserState extends ModmailUser {
+  avatarURL: string,
   discriminator: string,
+  id: string,
+  nickname: string,
+  username: string,
+}
+
+export interface MemberState extends UserState {
   nickname: string,
   role: string,
-  avatarURL: string,
 }
 
 export type Thread = {
