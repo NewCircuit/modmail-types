@@ -48,6 +48,14 @@ export type ModmailUser = {
     id: string,
 }
 
+export interface MemberState extends ModmailUser {
+  username: string,
+  discriminator: string,
+  nickname: string,
+  role: string,
+  avatarURL: string,
+}
+
 export type Thread = {
     author: ModmailUser,
     channel: string,
