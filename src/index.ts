@@ -52,7 +52,6 @@ export interface UserState extends ModmailUser {
   avatarURL: string,
   discriminator: string,
   id: string,
-  nickname: string,
   username: string,
 }
 
