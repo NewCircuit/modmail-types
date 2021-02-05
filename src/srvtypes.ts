@@ -4,6 +4,7 @@ export const WORKER_CALLS = {
   getRoles: 'get_member_roles',
   getMember: 'get_member_state',
   getAllMembers: 'get_all_member_states',
+  getUserState: 'get_user_state',
 }
 
 export interface ServerMessage {
@@ -39,4 +40,18 @@ export interface GetAllMemberStatesReq extends ServerMessage {
 
 export interface GetAllMemberStatesRes extends ServerResponse {
   data: MemberState[];
+}
+
+export interface GetUserStateReq extends ServerMessage {
+  args: [string];
+}
+
+export interface GetUserStateRes extends ServerResponse {
+  data: {
+    avatarURL: string,
+    discriminator: string,
+    id: string,
+    nickname: string,
+    username: string,
+  }
 }
