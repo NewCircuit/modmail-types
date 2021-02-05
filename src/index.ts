@@ -5,47 +5,47 @@ export * from './srvtypes';
 export * from './dbtypes';
 
 export enum FileType {
-    File,
-    Image,
+  File,
+  Image,
 }
 
 export type Attachment = {
-    id: string,
-    name: string,
-    sender: string,
-    source: string,
-    type: FileType,
+  id: string,
+  name: string,
+  sender: string,
+  source: string,
+  type: FileType,
 }
 
 export type Category = {
-    name: string,
-    emojiID: string,
-    guildID: string,
-    id: string,
-    isActive: boolean,
-    channelID: string,
+  name: string,
+  emojiID: string,
+  guildID: string,
+  id: string,
+  isActive: boolean,
+  channelID: string,
 }
 
 export type Edit = {
-    content: string,
-    message: string,
-    version: number,
+  content: string,
+  message: string,
+  version: number,
 }
 
 export type Message = {
-    content: string,
-    clientID: string | null,
-    edits: Edit[],
-    files: Attachment[],
-    isDeleted: boolean,
-    modmailID: string,
-    sender: string,
-    threadID: string,
-    internal: boolean
+  content: string,
+  clientID: string | null,
+  edits: Edit[],
+  files: Attachment[],
+  isDeleted: boolean,
+  modmailID: string,
+  sender: string,
+  threadID: string,
+  internal: boolean
 }
 
 export type ModmailUser = {
-    id: string,
+  id: string,
 }
 
 export interface MemberState extends ModmailUser {
@@ -57,34 +57,34 @@ export interface MemberState extends ModmailUser {
 }
 
 export type Thread = {
-    author: ModmailUser,
-    channel: string,
-    id: string,
-    isActive: boolean,
-    messages: Message[],
-    category: string,
+  author: ModmailUser,
+  channel: string,
+  id: string,
+  isActive: boolean,
+  messages: Message[],
+  category: string,
 }
 
 export type MuteStatus = {
-    user: string,
-    till: number,
-    category: string,
-    reason: string,
+  user: string,
+  till: number,
+  category: string,
+  reason: string,
 }
 
 export type StandardReply = {
-    reply: string,
-    name: string,
-    id: string,
+  reply: string,
+  name: string,
+  id: string,
 }
 
 export enum RoleLevel {
-    Admin,
-    Mod,
+  Admin,
+  Mod,
 }
 
 export type Role = {
-    category: string,
-    roleID: string,
-    level: RoleLevel,
+  category: string,
+  roleID: string,
+  level: RoleLevel,
 }
