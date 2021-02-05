@@ -3,6 +3,7 @@ import { MemberState } from '.';
 export const WORKER_CALLS = {
   getRoles: 'get_member_roles',
   getMember: 'get_member_state',
+  getAllMembers: 'get_all_member_states',
 }
 
 export interface ServerMessage {
@@ -30,4 +31,12 @@ export interface GetMemberStateReq extends ServerMessage {
 
 export interface GetMemberStateRes extends ServerResponse {
   data: MemberState;
+}
+
+export interface GetAllMemberStatesReq extends ServerMessage {
+  args: [string];
+}
+
+export interface GetAllMemberStatesRes extends ServerResponse {
+  data: MemberState[];
 }
