@@ -1,14 +1,14 @@
 {
-  "name": "modmail-types",
-  "version": "1.0.0",
+  "name": "@Floor-Gang/modmail-types",
+  "version": "1.0.1",
   "description": "Types shared in Modmail",
   "main": "dist/index.js",
-  "types": "src/index.ts",
-  "repository": "https://github.com/Floor-Gang/modmail-types.git",
+  "types": "dist/index.d.ts",
+  "repository": "git://github.com/Floor-Gang/modmail-types.git",
   "author": "Floor Gang <https://github.com/Floor-Gang>",
   "license": "GPL-3.0",
   "scripts": {
-    "postinstall": "tsc"
+    "prepublish": "tsc"
   },
   "dependencies": {}
 }
