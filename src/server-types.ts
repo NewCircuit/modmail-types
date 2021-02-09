@@ -9,6 +9,16 @@ export type UserStateCache = {
 }
 
 /**
+ * This is the response body type of "GET /api/:category ID/threads/:thread ID"
+ * @type ThreadResponse
+ * @prop {UserStateCache} user All the cached users from modmail bot that are
+ * mentioned in each message of this thread
+ */
+export interface ThreadResponse extends Thread {
+  users: UserStateCache,
+}
+
+/**
  * This is the response body type of "GET /api/:category ID/threads"
  * @type ThreadsResponse
  * @prop {UserStateCache} users All the cached users from modmail bot that are
