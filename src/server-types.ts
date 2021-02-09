@@ -4,7 +4,7 @@ import {
   UserState,
 } from '.';
 
-type UserStateCache = {
+export type UserStateCache = {
   [key: string]: UserState;
 }
 
