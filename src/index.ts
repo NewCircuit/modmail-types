@@ -1,7 +1,8 @@
 /**
  * These are ALL the types that exist in the Modmail ecosystem
  */
-export * from './srvtypes';
+export * from './server-types';
+export * from './worker-types';
 
 export enum FileType {
   File,
