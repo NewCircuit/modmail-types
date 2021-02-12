@@ -24,7 +24,7 @@ export type Category = {
   guildID: string,
   id: string,
   isActive: boolean,
-  channelID: string,
+  channelID: string | null,
 }
 
 export type Edit = {
