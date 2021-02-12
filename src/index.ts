@@ -11,6 +11,7 @@ export enum FileType {
 
 export type Attachment = {
   id: string,
+  messageID: string,
   name: string,
   sender: string,
   source: string,
