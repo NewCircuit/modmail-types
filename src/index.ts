@@ -65,6 +65,7 @@ export type Thread = {
   author: ModmailUser,
   channel: string,
   id: string,
+  isAdminOnly: boolean,
   isActive: boolean,
   messages: Message[],
   category: string,
