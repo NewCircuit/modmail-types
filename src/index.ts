@@ -20,6 +20,7 @@ export type Attachment = {
 export type Category = {
   name: string,
   emojiID: string,
+  description: string,
   guildID: string,
   id: string,
   isActive: boolean,
