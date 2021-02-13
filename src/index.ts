@@ -82,7 +82,6 @@ export type MuteStatus = {
 export type StandardReply = {
   reply: string,
   name: string,
-  id: string,
 }
 
 export enum RoleLevel {
