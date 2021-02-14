@@ -62,6 +62,21 @@ export interface MemberState extends UserState {
   role: string,
 }
 
+export type RoleState = {
+  id: string,
+  position: number,
+  guildID: string,
+  name: string,
+}
+
+export type ChannelState = {
+  id: string,
+  type: string,
+  parentID: string,
+  guildID: string,
+  isDeleted: boolean,
+}
+
 export type Thread = {
   author: ModmailUser,
   channel: string,

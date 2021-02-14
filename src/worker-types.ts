@@ -1,7 +1,7 @@
 /**
  * IPC types between the modmail bot and webserver.
  */
-import { MemberState, UserState } from '.';
+import { MemberState } from '.';
 
 /**
  * All the accepted calls by the modmail bot.
@@ -20,6 +20,8 @@ export const WORKER_CALLS = {
   getMember: 'get_member_state',
   getAllMembers: 'get_all_member_states',
   getUserState: 'get_user_state',
+  getChannel: 'get_channel_state',
+  getRole: 'get_role_state',
 }
 
 /**
@@ -112,22 +114,15 @@ export interface GetAllMemberStatesRes extends ServerResponse {
 }
 
 /**
- * A message from Floor-Gang/modmail-server specific to the "get_user_state"
- * worker API call.
- * @interface GetUserStateReq
+ * @interface GetStateReq
  * @prop {[string]} args
  * - args[0]: The ID of the user requested
  * - args[1]: Whether to rely on cache only
  */
-export interface GetUserStateReq extends ServerMessage {
+export interface GetStateReq extends ServerMessage {
   args: [string, boolean];
 }
 
-/**
- * The response type to the "get_user_state" worker API call
- * @interface GetUserStateRes
- * @prop {UserState} data
- */
-export interface GetUserStateRes extends ServerResponse {
-  data: UserState;
+export interface GetStateRes<T> extends ServerResponse {
+  data: T;
 }
