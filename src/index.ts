@@ -71,6 +71,7 @@ export type RoleState = {
 }
 
 export type ChannelState = {
+  name: string,
   id: string,
   type: string,
   parentID: string | null,
