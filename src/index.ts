@@ -67,6 +67,7 @@ export type RoleState = {
   position: number,
   guildID: string,
   name: string,
+  color: number,
 }
 
 export type ChannelState = {
