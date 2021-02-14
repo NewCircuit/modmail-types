@@ -6,13 +6,13 @@ import { MemberState, UserState } from '.';
 /**
  * All the accepted calls by the modmail bot.
  * @const WORKER_CALLS
- * @prop {string} getRoles get roles of a member from a given guild 
+ * @prop {string} getRoles get roles of a member from a given guild
  * - ( see also: @interface GetRolesReq )
  * @prop {string} getMember get a member from a given guild
  * - ( see also: @interface GetMemberStateReq )
- * @prop {string} getAllMembers get all members from a guild 
+ * @prop {string} getAllMembers get all members from a guild
  * - ( see also: @interface GetAllMemberStatesReq )
- * @prop {string} getUserState get a user from Discord 
+ * @prop {string} getUserState get a user from Discord
  * - ( see also: @interface GetUserStateReq )
  */
 export const WORKER_CALLS = {
@@ -26,7 +26,7 @@ export const WORKER_CALLS = {
  * A message from Floor-Gang/modmail-server to Floor-Gang/modmail
  * @interface ServerMessage
  * @prop {string} id A unique identifier for this request
- * @prop {string} task The worker API call requested 
+ * @prop {string} task The worker API call requested
  * (see also: @const WORKER_CALLS)
  * @prop {any[]} args Arguments provided for the API call
  */
@@ -90,7 +90,7 @@ export interface GetMemberStateRes extends ServerResponse {
 }
 
 /**
- * A message from Floor-Gang/modmail-server specific to the 
+ * A message from Floor-Gang/modmail-server specific to the
  * "get_all_member_states" worker API call.
  * @interface GetAllMemberStatesReq
  * @prop {[string, string?, number?]} args
@@ -115,11 +115,12 @@ export interface GetAllMemberStatesRes extends ServerResponse {
  * A message from Floor-Gang/modmail-server specific to the "get_user_state"
  * worker API call.
  * @interface GetUserStateReq
- * @prop {[string]} args 
+ * @prop {[string]} args
  * - args[0]: The ID of the user requested
+ * - args[1]: Whether to rely on cache only
  */
 export interface GetUserStateReq extends ServerMessage {
-  args: [string];
+  args: [string, boolean];
 }
 
 /**
