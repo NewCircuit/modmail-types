@@ -73,7 +73,7 @@ export type RoleState = {
 export type ChannelState = {
   id: string,
   type: string,
-  parentID: string,
+  parentID: string | null,
   guildID: string,
   isDeleted: boolean,
 }
