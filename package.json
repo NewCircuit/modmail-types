@@ -1,11 +1,11 @@
 {
-  "name": "@Floor-Gang/modmail-types",
+  "name": "@NewCircuit/modmail-types",
   "version": "1.15.0",
   "description": "Types shared in Modmail",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "repository": "git://github.com/Floor-Gang/modmail-types.git",
-  "author": "Floor Gang <https://github.com/Floor-Gang>",
+  "repository": "git://github.com/NewCircuit/modmail-types.git",
+  "author": "Floor Gang <https://github.com/NewCircuit>",
   "license": "GPL-3.0",
   "scripts": {
     "prepublish": "tsc"

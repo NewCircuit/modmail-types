@@ -25,7 +25,7 @@ export const WORKER_CALLS = {
 }
 
 /**
- * A message from Floor-Gang/modmail-server to Floor-Gang/modmail
+ * A message from NewCircuit/modmail-server to NewCircuit/modmail
  * @interface ServerMessage
  * @prop {string} id A unique identifier for this request
  * @prop {string} task The worker API call requested
@@ -39,7 +39,7 @@ export interface ServerMessage {
 }
 
 /**
- * A response from Floor-Gang/modmail to Floor-Gang/modmail-server
+ * A response from NewCircuit/modmail to NewCircuit/modmail-server
  * @interface ServerResponse
  * @prop {string} id This ID should be matching the server's message ID
  * @prop {any} data Data returned from a worker API call
@@ -50,7 +50,7 @@ export interface ServerResponse {
 }
 
 /**
- * A message from Floor-Gang/modmail-server specific to the "get_member_roles"
+ * A message from NewCircuit/modmail-server specific to the "get_member_roles"
  * worker API call.
  * @interface GetRolesReq
  * @prop {[string, string]} args
@@ -71,7 +71,7 @@ export interface GetRolesRes extends ServerResponse {
 }
 
 /**
- * A message from Floor-Gang/modmail-server specific to the "get_member_state"
+ * A message from NewCircuit/modmail-server specific to the "get_member_state"
  * worker API call.
  * @interface GetMemberStateReq
  * @prop {[string, string]} args
@@ -92,7 +92,7 @@ export interface GetMemberStateRes extends ServerResponse {
 }
 
 /**
- * A message from Floor-Gang/modmail-server specific to the
+ * A message from NewCircuit/modmail-server specific to the
  * "get_all_member_states" worker API call.
  * @interface GetAllMemberStatesReq
  * @prop {[string, string?, number?]} args

@@ -1,4 +1,4 @@
-// Floor-Gang/modmail-server types
+// NewCircuit/modmail-server types
 import { 
   Thread,
   UserState,
