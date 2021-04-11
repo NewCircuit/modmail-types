@@ -1,5 +1,5 @@
 {
-  "name": "modmail-types",
+  "name": "@newcircuit/modmail-types",
   "version": "2.0.0",
   "description": "Types shared in Modmail",
   "main": "build/index.js",
